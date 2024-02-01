@@ -10,9 +10,9 @@ var cameraKit = await bootstrapCameraKit({ apiToken: 'eyJhbGciOiJIUzI1NiIsImtpZC
 const session = await cameraKit.createSession()
 document.getElementById('canvas').replaceWith(session.output.live)
 
-const { lenses } = await cameraKit.lensRepository.loadLensGroups(['10cfffaa-9dd4-49a8-8728-f973819b70eb'])
+const { lenses } = await cameraKit.lensRepository.loadLensGroups(['289ecde0-ae5e-495d-9a83-a3b6d89c632c'])
 
-session.applyLens(lenses[0])
+session.applyLens(lenses[3])
 
 let mediaStream = await navigator.mediaDevices.getUserMedia({ video: 
     { facingMode: 'environment' } 
